@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чек-лист твоих генетических особенностей</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; background: #f8f8ff; color: #333; }
+        h1, h2 { color: #4a148c; }
+        .question { border-bottom: 1px solid #ccc; margin-bottom: 15px; padding-bottom: 10px; }
+        .question p { margin: 0 0 5px; }
+        .result { font-weight: bold; font-size: 1.2em; margin-top: 20px; padding: 15px; background: #e0f7fa; border-radius: 6px; display: none; }
+        button { background: #7b1fa2; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; margin-top: 10px; }
+        button:hover { background: #6a1b9a; }
+    </style>
+</head>
+<body>
+    <h1>🧬 Чек-лист твоих генетических особенностей</h1>
+    <p>🧐 Проверь себя по 11 признакам и узнай, насколько ты уникален!</p>
+
+    <form id="quizForm">
+        <div class="question"><p>1. Гетерохромия (разный цвет глаз)</p><input type="radio" name="q1" value="1"> Да <input type="radio" name="q1" value="0" checked> Нет</div>
+        <div class="question"><p>2. Непереносимость кориандра</p><input type="radio" name="q2" value="1"> Да <input type="radio" name="q2" value="0" checked> Нет</div>
+        <div class="question"><p>3. Гибкий мизинец</p><input type="radio" name="q3" value="1"> Да <input type="radio" name="q3" value="0" checked> Нет</div>
+        <div class="question"><p>4. Сворачивание языка в трубочку</p><input type="radio" name="q4" value="1"> Да <input type="radio" name="q4" value="0" checked> Нет</div>
+        <div class="question"><p>5. Вдовий треугольник</p><input type="radio" name="q5" value="1"> Да <input type="radio" name="q5" value="0" checked> Нет</div>
+        <div class="question"><p>6. Ямочки на щеках</p><input type="radio" name="q6" value="1"> Да <input type="radio" name="q6" value="0" checked> Нет</div>
+        <div class="question"><p>7. Греческая стопа</p><input type="radio" name="q7" value="1"> Да <input type="radio" name="q7" value="0" checked> Нет</div>
+        <div class="question"><p>8. Нет зубов мудрости</p><input type="radio" name="q8" value="1"> Да <input type="radio" name="q8" value="0" checked> Нет</div>
+        <div class="question"><p>9. Гипермобильность суставов</p><input type="radio" name="q9" value="1"> Да <input type="radio" name="q9" value="0" checked> Нет</div>
+        <div class="question"><p>10. Волосы на макушке в две стороны</p><input type="radio" name="q10" value="1"> Да <input type="radio" name="q10" value="0" checked> Нет</div>
+        <div class="question"><p>11. Чувствительность к горькому</p><input type="radio" name="q11" value="1"> Да <input type="radio" name="q11" value="0" checked> Нет</div>
+
+        <button type="button" onclick="calculateResult()">Узнать результат</button>
+    </form>
+
+    <div class="result" id="resultBox"></div>
+
+    <script>
+        function calculateResult() {
+            let form = document.getElementById('quizForm');
+            let total = 0;
+            for (let i = 1; i <= 11; i++) {
+                total += parseInt(form['q' + i].value);
+            }
+
+            let result = '';
+            if (total <= 3) {
+                result = 'Классический вариант 😊 — всё стабильно, но всё равно интересно!';
+            } else if (total <= 6) {
+                result = 'У тебя есть интересные особенности 🧠 — ты явно не среднестатистический человек!';
+            } else {
+                result = 'Ты почти генетический единорог! 🌈🦄 У тебя много редких черт!';
+            }
+
+            document.getElementById('resultBox').innerText = result;
+            document.getElementById('resultBox').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
