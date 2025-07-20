@@ -11,10 +11,7 @@
     body {
       background: url('images/background.png') no-repeat center center fixed;
       background-size: cover;
-      background-attachment: scroll;
-      background-color: #000; /* фонв, если не вся страница занята картинкой */
-      background-attachment: fixed;
-      background-repeat: no-repeat;
+      background-color: #000;
       font-family: 'Segoe UI', sans-serif;
       color: #000;
       margin: 0;
@@ -29,10 +26,37 @@
       text-shadow: 0 0 5px #00ffff, 0 0 10px #0000ff, 0 0 15px #00ffff;
       margin-bottom: 1rem;
     }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
     }
+
+    .intro {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: rgba(255, 255, 255, 0.85);
+      border-left: 5px solid #00cccc;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .intro p {
+      margin: 0.5rem 0;
+    }
+
+    .intro ul {
+      margin-left: 1.2rem;
+      padding-left: 1rem;
+    }
+
+    .intro li {
+      margin: 0.4rem 0;
+    }
+
     .card {
       background: #e6f7ff;
       border-radius: 1rem;
@@ -43,20 +67,24 @@
       align-items: center;
       gap: 1rem;
     }
+
     .card img {
       width: 80px;
       height: 80px;
       object-fit: cover;
       border-radius: 0.5rem;
     }
+
     .card-content {
       flex: 1;
     }
+
     .card-content label {
       font-weight: bold;
       display: block;
       margin-bottom: 0.25rem;
     }
+
     .result-button {
       display: block;
       margin: 2rem auto;
@@ -68,34 +96,28 @@
       border-radius: 0.5rem;
       cursor: pointer;
     }
+
     #result {
       text-align: center;
       margin-top: 2rem;
       font-size: 1.2rem;
     }
-    .intro {
-      background: rgba(255, 255, 255, 0.8);
-      border-left: 5px solid #00cccc;
-      padding: 1rem;
-      margin: 2rem 0;
-      border-radius: 1rem;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    .intro p {
-      margin: 0.5rem 0;
-    }
-    .intro ul {
-      margin-left: 1.2rem;
-      padding-left: 1rem;
-    }
-    .intro li {
-      margin: 0.4rem 0;
-    }
   </style>
 </head>
 <body>
+
+  <div class="intro">
+    <p>Инструкция 📋</p>
+    <p>Вот подборка из 11 признаков. Каждый из них генетически обоснован и хорошо изучен. По сочетанию у тебя этих признаков можно понять, насколько ты уникальный человек.</p>
+    <p>У каждого признака есть:</p>
+    <ul>
+      <li>Чекбокс: отметь, если это про тебя ✅</li>
+      <li>Информация о распространенности</li>
+      <li>Как проверить признак</li>
+      <li>Краткое пояснение</li>
+    </ul>
+  </div>
+
   <div class="container">
     <h1>🧬 Генетический чек-лист</h1>
     <div class="intro">
