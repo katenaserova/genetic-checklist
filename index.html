@@ -288,7 +288,8 @@
     // Определяем текст и картинки результата
     if (checked <= 3) {
       resultText = 'Ты - классика. Базовый набор с проверенными временем признаками. Минимум рисков, все строго по стандартам';
-      resultImage = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg']; // Картинка для "классика"
+      const images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg']; // Картинка для "классика"
+      resultImage = images[Math.floor(Math.random() * images.length)]; // Рандомный выбор картинки для "классика"
     } else if (checked <= 4) {
       resultText = 'У тебя есть крутые генетические особенности, которые точно отличают тебя от других. Ты почти как Нео.';
       const images = ['images/image4.jpg', 'images/image5.jpg', 'images/image6.jpg'];
