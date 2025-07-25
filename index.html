@@ -103,46 +103,62 @@
       font-size: 1rem;
     }
     @media (max-width: 768px) {
-    body {
-    padding: 1rem;
-    background-image: url('images/background.png');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    background-attachment: scroll;
+      body {
+        padding: 1rem;
+        background-image: url('images/background.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        background-attachment: scroll;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .intro {
+        padding: 1rem;
+        font-size: 0.95rem;
+      }
+
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+
+      .result-button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.75rem;
+      }
+
+      .card-content {
+        width: 100%;
+      }
+
+      #result {
+        font-size: 1.5rem;  /* Увеличиваем размер шрифта для мобильных */
+        margin-top: 20px;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+      }
+
+      /* Если картинка слишком большая, делаем ее меньше на мобильных устройствах */
+      #result img {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 15px;
+      }
     }
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .intro {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-
-  .card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-  }
-
-  .result-button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.75rem;
-  }
-
-  .card-content {
-    width: 100%;
-  }
-}
   </style>
 </head>
 <body>
