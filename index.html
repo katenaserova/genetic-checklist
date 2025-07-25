@@ -286,15 +286,24 @@
     let additionalImage = '';
 
     // Определяем текст и картинки результата
+    let resultText = '';
+    let resultImage = '';
+    let additionalImage = '';
+
+    // Для "классика" (checked <= 3)
     if (checked <= 3) {
       resultText = 'Ты - классика. Базовый набор с проверенными временем признаками. Минимум рисков, все строго по стандартам';
-      const images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg']; // Картинка для "классика"
+      const images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg']; // Картинки для "классика"
       resultImage = images[Math.floor(Math.random() * images.length)]; // Рандомный выбор картинки для "классика"
-    } else if (checked <= 4) {
+    } 
+    // Для "Нео" (checked <= 4)
+    else if (checked <= 4) {
       resultText = 'У тебя есть крутые генетические особенности, которые точно отличают тебя от других. Ты почти как Нео.';
       const images = ['images/image4.jpg', 'images/image5.jpg', 'images/image6.jpg'];
       resultImage = images[Math.floor(Math.random() * images.length)]; // Рандомный выбор картинки для "Нео"
-    } else {
+    } 
+    // Для "Генетический единорог" (по умолчанию)
+    else {
       resultText = 'Да ты просто уникален! Можно сказать - генетический единорог 🌈🧠';
       const images = ['images/image7.jpg', 'images/image8.jpg', 'images/image9.jpg'];
       resultImage = images[Math.floor(Math.random() * images.length)]; // Рандомный выбор картинки для "генетический единорог"
