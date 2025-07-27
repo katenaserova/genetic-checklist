@@ -335,12 +335,11 @@
       }
 
       // Вставляем результат в элемент #result
-      const resultElement = document.getElementById('result');
-      resultElement.innerHTML = 
+      resultElement.innerHTML = `
         <p>Отмеченных признаков: ${checked}. ${resultText}</p>
         <img src="${resultImage}" alt="Результат" style="width: 200px; height: auto; margin-top: 15px;" />
-        ${additionalImage ? <img src="${additionalImage}" alt="Результат дополнительное" style="width: 200px; height: auto; margin-top: 15px;" /> : ''}
-      ;
+        ${additionalImage ? `<img src="${additionalImage}" alt="Дополнительное изображение" style="width: 200px; height: auto; margin-top: 15px;" />` : ''}
+      `;
 
       // Применяем стили для улучшения видимости текста
       resultElement.style.color = '#fff';  // Белый цвет текста
