@@ -310,6 +310,7 @@
 
   <script>
     function showResult() {
+      const resultElement = document.getElementById('result'); // ← вот этой строки не хватало!
       const checked = document.querySelectorAll('.trait:checked').length;
       let resultText = '';
       let resultImage = '';
